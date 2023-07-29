@@ -23,6 +23,18 @@ li {
   height: 145px;
 }
 
+li button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
 /* color 1, 5, 9 etc */
 li:nth-child(4n + 1) {
   background-color: rgba(0, 0, 0, 0.1);

@@ -1,9 +1,20 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+const baseURL = 'https://eskom-calendar-api.shuttleapp.rs';
+
 const fetchProvinces = createAsyncThunk(
   'provinces/fetchProvinces',
   async () => {
-    const response = await fetch('https://eskom-calendar-api.shuttleapp.rs/list_areas');
+    const response = await fetch(`${baseURL}/list_areas`);
+    const data = await response.json();
+    return data;
+  },
+);
+
+const fetchDetails = createAsyncThunk(
+  'provinces/fetchDetails',
+  async (area) => {
+    const response = await fetch(`${baseURL}/outages/${area}`);
     const data = await response.json();
     return data;
   },
@@ -32,6 +43,6 @@ const provincesSlice = createSlice({
   },
 });
 
-export { fetchProvinces };
+export { fetchProvinces, fetchDetails };
 
 export default provincesSlice.reducer;

@@ -7,22 +7,35 @@ const categories = [
   'Mpumalanga', 'North West', 'Northern Cape', 'Western Cape',
 ];
 
+const baseURL = 'https://eskom-calendar-api.shuttleapp.rs';
+
 const Province = ({ province }) => {
-  const str = province.split('-').join(' ');
-  // find the caregory that is contained in the province string ex 'Buffalo City'
-  // in 'Buffalo City - Eastern Cape'
+  const fetchDetails = async () => {
+    const response = await fetch(`${baseURL}/outages/${province}`);
+    const data = await response.json();
+    return data;
+  };
+
+  let str = province.split('-').join(' ');
   let category;
   categories.forEach((cat) => {
     if (str.includes(cat.toLowerCase())) {
       category = cat;
     }
+    str = str.replace(cat.toLowerCase(), '');
   });
-  // remove the length of the category from the string
+
+  const handleClick = async () => {
+    const details = await fetchDetails();
+    console.log(details);
+  };
 
   return (
     <li>
-      <span className="category">{category}</span>
-      <span className="province">{str}</span>
+      <button type="button" onClick={handleClick}>
+        <span className="category">{category}</span>
+        <span className="province">{str}</span>
+      </button>
     </li>
   );
 };

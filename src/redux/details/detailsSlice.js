@@ -5,7 +5,7 @@ const baseURL = 'https://eskom-calendar-api.shuttleapp.rs';
 const fetchDetails = createAsyncThunk(
   'details/fetchDetails',
   async (area) => {
-    const response = await fetch(`${baseURL}/area/${area}`);
+    const response = await fetch(`${baseURL}/outages/${area}`);
     const data = await response.json();
     return data;
   },
@@ -24,6 +24,7 @@ const detailsSlice = createSlice({
         state.loading = true;
       })
       .addCase(fetchDetails.fulfilled, (state, action) => {
+        state.details = [];
         state.details = action.payload;
         state.loading = false;
       })
