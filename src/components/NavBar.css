@@ -1,0 +1,20 @@
+:root {
+  --primary: #4f57b4;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+nav > * {
+  margin: 1.5rem;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 18px;
+}
