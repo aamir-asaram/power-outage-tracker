@@ -1,0 +1,46 @@
+body {
+  background-color: #e84e8a;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+li {
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 49.52%;
+  height: 145px;
+}
+
+/* color 1, 5, 9 etc */
+li:nth-child(4n + 1) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* color 2, 6, 10 etc */
+li:nth-child(4n) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.category {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.province {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
