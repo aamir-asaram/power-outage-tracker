@@ -16,7 +16,7 @@ const NavBar = () => {
       >
         <FaChevronLeft />
       </button>
-      <h2>All Zones</h2>
+      {/* <h2>All Zones</h2> */}
       <FaSearch className="search-icon" />
     </nav>
   );

@@ -8,6 +8,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 58px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -65,6 +66,7 @@ li:nth-child(4n) {
   justify-content: center;
   width: 90%;
   margin-left: 5%;
+  margin-top: 64px;
   font-size: 1.8rem;
   font-weight: 700;
   text-transform: capitalize;

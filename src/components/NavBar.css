@@ -8,6 +8,10 @@ nav {
   background-color: var(--primary);
   color: #fff;
   height: max-content;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
 }
 
 nav > * {
@@ -23,8 +27,7 @@ nav h2 {
 .back-btn {
   background-color: transparent;
   margin: 0;
-  padding: 0;
-  padding-inline: 1.7rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
