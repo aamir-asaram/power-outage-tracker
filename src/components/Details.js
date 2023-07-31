@@ -8,7 +8,7 @@ const categories = [
   'Mpumalanga', 'North West', 'Northern Cape', 'Western Cape',
 ];
 
-const baseURL = 'https://eskom-calendar-api.shuttleapp.rs';
+export const baseURL = 'https://eskom-calendar-api.shuttleapp.rs';
 
 const Details = () => {
   const { province } = useParams();
@@ -76,7 +76,6 @@ const Details = () => {
     const stages = await findStages();
     const days = nextDays(11);
     const outages = [];
-    console.log(days);
     const displayData = [];
     days.forEach((day) => {
       stages.forEach((stage) => {
@@ -88,7 +87,6 @@ const Details = () => {
       });
     });
     days.forEach((day) => {
-      // log the day in the format day month year
       const dayString = `${day.getDate()} ${day.toLocaleString('default', { month: 'long' })} ${day.getFullYear()}`;
       const dayOutages = [];
       outages.forEach((outage) => {
@@ -115,7 +113,6 @@ const Details = () => {
   useEffect(() => {
     output();
   }, []);
-  console.log(display);
 
   return (
     <>

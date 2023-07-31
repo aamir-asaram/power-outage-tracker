@@ -4,6 +4,22 @@ body, html {
   overflow-x: hidden;
 }
 
+#current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 104px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+#current span {
+  margin: 0 0.5rem;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -66,7 +82,7 @@ li:nth-child(4n) {
   justify-content: center;
   width: 90%;
   margin-left: 5%;
-  margin-top: 64px;
+  margin-top: 84px;
   font-size: 1.8rem;
   font-weight: 700;
   text-transform: capitalize;

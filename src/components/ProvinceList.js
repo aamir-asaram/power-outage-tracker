@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProvinces } from '../redux/provinces/provincesSlice';
 import Province from './Province';
+import Current from './Current';
 import './provinceList.css';
 
 const ProvinceList = () => {
@@ -30,6 +31,7 @@ const ProvinceList = () => {
 
   return (
     <div>
+      <Current />
       <ul>
         {provinces.map((province) => (
           <Province key={province} province={province} />
