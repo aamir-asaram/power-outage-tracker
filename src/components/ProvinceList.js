@@ -20,6 +20,7 @@ const ProvinceList = () => {
     } else {
       const updatedSplitProvinces = provinces.map((province) => province.split('-').join(' '));
       setSplitProvinces(updatedSplitProvinces);
+      setFilteredProvinces(updatedSplitProvinces);
     }
   }, [dispatch, provinces]);
 
