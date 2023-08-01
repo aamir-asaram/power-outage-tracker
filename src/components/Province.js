@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-const categories = [
+export const categories = [
   'Buffalo City', 'City Of Cape Town', 'City Power', 'Eastern Cape',
   'Eskom Direct', 'Free State', 'Gauteng', 'Kwazulu Natal', 'Limpopo',
   'Mpumalanga', 'North West', 'Northern Cape', 'Western Cape',

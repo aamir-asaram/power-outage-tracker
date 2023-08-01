@@ -117,7 +117,6 @@ const Details = () => {
   return (
     <>
       <h1 id="details">{`${category} - ${str}`}</h1>
-      {/* Render the elements from the 'display' state */}
       {display.map((d) => (
         <div key={d.day}>
           <h1 id="day-head">{d.day}</h1>
