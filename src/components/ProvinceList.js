@@ -58,7 +58,7 @@ const ProvinceList = () => {
       </div>
       <ul>
         {filteredProvinces.map((province) => (
-          <Province key={province} province={province} fetchDetails={fetchDetails} />
+          <Province key={province} province={province.split(' ').join('-')} fetchDetails={fetchDetails} />
         ))}
       </ul>
     </div>
