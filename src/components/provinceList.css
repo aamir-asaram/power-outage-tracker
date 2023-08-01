@@ -52,7 +52,7 @@ select option {
 
 /* change color of highlighted option */
 select option:hover {
-  box-shadow: 0 0 10px 100px #ff5697 inset;
+  box-shadow: 0 0 10px 100px var(--primary) inset;
 }
 
 select option:focus {
