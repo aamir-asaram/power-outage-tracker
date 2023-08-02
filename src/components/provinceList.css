@@ -12,6 +12,16 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
+#loading {
+  /* center it on the screen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: 700;
+}
+
 #current {
   display: flex;
   align-items: center;
