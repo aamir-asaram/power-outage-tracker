@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProvinces } from '../redux/provinces/provincesSlice';
 import Province, { categories } from './Province';
-import Current, { fetchDetails } from './Current';
+import Current from './Current';
 import './provinceList.css';
 
 const ProvinceList = () => {
@@ -58,7 +58,7 @@ const ProvinceList = () => {
       </div>
       <ul>
         {filteredProvinces.map((province) => (
-          <Province key={province} province={province.split(' ').join('-')} fetchDetails={fetchDetails} />
+          <Province key={province} province={province.split(' ').join('-')} />
         ))}
       </ul>
     </div>

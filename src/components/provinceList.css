@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 :root {
   --primary: #e84e8a;
 }
@@ -6,6 +8,7 @@ body, html {
   background-color: var(--primary);
   color: #fff;
   overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
 }
 
 #current {
@@ -30,6 +33,13 @@ body, html {
   margin-top: 2rem;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 1rem;
+}
+
+/* make filter sticky once it reaches the navbar */
+#filter.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 select {

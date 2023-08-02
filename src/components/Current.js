@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './provinceList.css';
 
 export const fetchDetails = async (province = 'western-cape-stellenbosch') => {
@@ -11,10 +11,22 @@ export const fetchDetails = async (province = 'western-cape-stellenbosch') => {
   }
 };
 
-const out = await fetchDetails();
-console.log(out);
-
 const Current = () => {
+  const [out, setOut] = useState([]);
+
+  useEffect(() => {
+    const fetchOutages = async () => {
+      try {
+        const data = await fetchDetails('western-cape-stellenbosch');
+        setOut(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchOutages();
+  }, []);
+
   const maxStage = () => {
     let max = 0;
     if (out.length > 0) {
