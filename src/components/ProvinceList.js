@@ -25,7 +25,7 @@ const ProvinceList = () => {
   }, [dispatch, provinces]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p id="loading">Loading...</p>;
   }
 
   if (error) {
