@@ -4,7 +4,8 @@
   --primary: #e84e8a;
 }
 
-body, html {
+body,
+html {
   background-color: var(--primary);
   color: #fff;
   overflow-x: hidden;
@@ -102,12 +103,10 @@ li button {
   color: inherit;
 }
 
-/* color 1, 5, 9 etc */
 li:nth-child(4n + 1) {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* color 2, 6, 10 etc */
 li:nth-child(4n) {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -150,7 +149,7 @@ li:nth-child(4n) {
 
 .stage {
   margin: auto;
-  margin-left: none;
+  margin-left: 0;
   font-size: 1.7rem;
   text-transform: capitalize;
 }

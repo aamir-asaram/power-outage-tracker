@@ -20,7 +20,6 @@ const NavBar = () => {
         type="button"
         className="color-toggle"
         onClick={() => {
-          // change root color
           const root = document.documentElement;
           const color = root.style.getPropertyValue('--primary');
           if (color === '#e84e8a') {
